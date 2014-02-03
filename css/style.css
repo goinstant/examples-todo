@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0 0 45px;
+  font-family: sans-serif;
+  font-size: 16px;
+  background: #eee;
+  border-top: 3px solid #4FBA29;
+}
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+}
+  .todos-wrapper {
+    min-height: 400px;
+    background: white;
+    padding: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+  }
+
+/* Add a todo input */
+input[type="text"] {
+  margin: 0;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #66CE66;
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  box-shadow: 0 0 5px rgba(102, 206, 102, 0);
+}
+  input[type="text"]:focus {
+    outline: 0;
+    border-color: #66CE66;
+    box-shadow: 0 0 5px rgba(102, 206, 102, 1);
+  }
+
+/* Todo list */
+#list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px dotted #ccc
+}
+  #list li {
+    position: relative;
+    list-style: none;
+    padding: 8px 16px 8px 35px;
+    line-height: 1.4;
+    border-bottom: 1px dotted #ccc;
+    font-weight: 500;
+  }
+  #list li input[type="checkbox"] {
+    position: absolute;
+    top: 10px;
+    left: 6px;
+    margin-right: 7px;
+  }
+  /* Message for empty */
+  #list li[data-empty="true"] {
+    padding: 15px;
+    margin-top: 15px;
+    text-align: center;
+    background: #EFF6F8;
+    font-size: .8em;
+    font-weight: normal;
+    border: 1px solid #C1D2E0;
+    border-radius: 4px;
+    text-shadow: 0 -1px 0 white;
+    color: #6D869C;
+  }
+
+@media screen and (max-width: 768px) {
+  .container {
+      padding: 0 10px;
+      margin: 20px auto;
+  }
+  h1 {
+      font-size: 1.2em;
+  }
+  .todos-wrapper {
+      min-height: 0;
+  }
+  #list {
+      height: 225px;
+      font-size: .85em;
+  }
+  input[type="text"] {
+      width: 100%;
+      margin-bottom: 5px;
+      font-size: 1em;
+      padding: 8px;
+  }
+}

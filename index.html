@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>GoInstant Todo Example</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <script src="https://cdn.goinstant.net/v1/platform.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/todo.js"></script>
+    <div class="container">
+      <h1>todo!</h1>
+      <div class="todos-wrapper">
+        <form name="todos" action="#">
+          <input type="text" name="title" placeholder="What do you need to do?">
+        </form>
+        <ul id="list">
+          <li data-empty="true">There are no items yet, add one!</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
